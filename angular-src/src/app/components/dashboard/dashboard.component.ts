@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { OrdiniComponent } from "../ordini/ordini.component";
 
 @Component({
   selector: 'app-dashboard',

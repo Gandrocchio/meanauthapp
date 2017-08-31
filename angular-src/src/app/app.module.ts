@@ -16,13 +16,15 @@ import { ValidateService } from './services/validate.service';
 import { FlashMessagesModule } from "angular2-flash-messages";
 import { AuthService } from "./services/auth.service";
 import { AuthGuard } from "./guards/auth.guard";
+import { OrdiniComponent } from './components/ordini/ordini.component';
 
 const appRoutes: Routes = [
   {path:'', component: HomeComponent},
   {path:'register', component: RegisterComponent},
   {path:'login', component: LoginComponent},
   {path:'dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
-  {path:'profile', component: ProfileComponent, canActivate: [AuthGuard]}
+  {path:'profile', component: ProfileComponent, canActivate: [AuthGuard]},
+  {path:'ordini', component: OrdiniComponent, canActivate: [AuthGuard]}  
 ];
 
 @NgModule({
@@ -34,7 +36,8 @@ const appRoutes: Routes = [
     HomeComponent,
     DashboardComponent,
     DashboardComponent,
-    ProfileComponent
+    ProfileComponent,
+    OrdiniComponent
   ],
   imports: [
     BrowserModule,
